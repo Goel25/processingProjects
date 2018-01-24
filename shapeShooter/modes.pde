@@ -82,7 +82,7 @@ void play() {
     if (texts[i].life < 0) texts.splice(i, 1);//Remove it
   }
 
-  if (player.hit() && flashTime <= 0) {
+  if (player.hit() && player.flash <= 0) {
     player.flash+=flashTime;
     player.lives--;//If players hit, subtract life
   }
