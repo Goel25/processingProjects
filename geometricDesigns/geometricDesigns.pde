@@ -2,7 +2,7 @@ float t = 0;
 float scl = 1;
 
 void setup() {
-  size(window.innerWidth, window.innerHeight-4); //500, 700
+  size(window.innerWidth, window.innerHeight); //500, 700
   t = random(0, 100);
   scl = height / 700;
   background(20);
