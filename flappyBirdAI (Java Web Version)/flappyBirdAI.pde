@@ -39,11 +39,11 @@ final int cWidth = 900;
 final int cHeight = 500;
 
 void setup() {
-  birdImg = loadImage("bird.png");
-  pipeImg = loadImage("pipe.png");
-  pipeFlippedImg = loadImage("pipeFlipped.png");
-  //size(800, 500);
-  fullScreen();
+  birdImg = loadImage("data/bird.png");
+  pipeImg = loadImage("data/pipe.png");
+  pipeFlippedImg = loadImage("data/pipeFlipped.png");
+  size(window.innerWidth, window.innerHeight);
+  // fullScreen();
   Bird[] population = new Bird[popSize];
   for (int i = 0; i < population.length; i++) {
     population[i] = new Bird(startX, startY);

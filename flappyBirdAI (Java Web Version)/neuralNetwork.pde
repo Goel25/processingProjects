@@ -23,7 +23,7 @@ class NeuralNetwork {
       noLoop();
     }
 
-    float[] hiddenValues = hiddenBiases.clone(); //The array to hold the value of each hidden node based on the inputs, starting off with the biases so it doesn't have to be added later
+    float[] hiddenValues = hiddenBiases.slice(0); //The array to hold the value of each hidden node based on the inputs, starting off with the biases so it doesn't have to be added later
     for (int j = 0; j < hiddenValues.length; j++) { //Compute each hidden node
       for (int i = 0; i < inputs.length; i++) {
         hiddenValues[j] += (inputs[i] * inputHidden[i][j]);
@@ -34,7 +34,7 @@ class NeuralNetwork {
       hiddenValues[i] = activateReLu(hiddenValues[i]);
     }
 
-    float[] outputs = outputBiases.clone(); //The final outputs, starting out with the biases
+    float[] outputs = outputBiases.slice(0); //The final outputs, starting out with the biases
     for (int j = 0; j < outputs.length; j++) { //Compute each hidden node
       for (int i = 0; i < hiddenValues.length; i++) {
         outputs[j] += (hiddenValues[i] * hiddenOutput[i][j]);
